@@ -1,0 +1,83 @@
+<html>
+<head> Computer architecture<head>
+<body bgcolor="#faebd7">
+<ol>
+<li><a href="Subject.html.html " > Subject of this topic </a></li> 
+<li><a href="table.html.html " > table </a></li>
+<li><a href="images.html.html "> images </a></li>
+<li><a href="computer use.html.html "> Link is for computer use</a></li>
+</ol>
+<hr/>
+<p>
+<font face="po" color="#d2691e" size="3"> <b><u>Improving Memory Performance Inside a DRAM Chip</u></b></font><br/><br/>
+As Moore’s law continues to supply more transistors and as the processor–
+memory gap increases pressure on memory performance, the ideas of the previous section have made their way inside the DRAM chip. Generally, innovation
+has led to greater bandwidth, sometimes at the cost of greater latency.<br/> This subsection presents techniques that take advantage of the nature of DRAMs.
+As mentioned earlier, a DRAM access is divided into row access and column
+access.<br/> DRAMs must buffer a row of bits inside the DRAM for the column
+access, and this row is usually the square root of the DRAM size—for example,
+2 Kb for a 4 Mb DRAM. As DRAMs grew, additional structure and several
+opportunities for increasing bandwith were added.<br/>
+First, DRAMs added timing signals that allow repeated accesses to the row buffer without another row access time. Such a buffer comes naturally, as each array<br/>
+will buffer 1024 to 4096 bits for each access. Initially, separate column addresses
+had to be sent for each transfer with a delay after each new set of column addresses.
+Originally, DRAMs had an asynchronous interface to the memory controller,<br/>
+so every transfer involved overhead to synchronize with the controller. The second major change was to add a clock signal to the DRAM interface, so that the
+repeated transfers would not bear that overhead. Synchronous DRAM (SDRAM)
+is the name of this optimization.<br/> SDRAMs typically also have a programmable
+register to hold the number of bytes requested, and hence can send many bytes
+over several cycles per request. Typically, 8 or more 16-bit transfers can occur
+without sending any new addresses by placing the DRAM in burst mode; this
+mode, which supports critical word first transfers, is the only way that the peak
+bandwidths shown in Figure 2.14 can be achieved.<br/>
+Third, to overcome the problem of getting a wide stream of bits from the
+memory without having to make the memory system too large as memory system
+density increased, DRAMS were made wider. Initially, they offered a four-bit
+transfer mode; in 2010, DDR2 and DDR3 DRAMS had up to 16-bit buses.<br/>
+The fourth major DRAM innovation to increase bandwidth is to transfer data
+on both the rising edge and falling edge of the DRAM clock signal, <br/>
+thereby doubling the peak data rate. This optimization is called double data rate (DDR).
+To provide some of the advantages of interleaving, as well to help with power
+management, SDRAMs also introduced banks, breaking a single SDRAM into 2
+to 8 blocks (in current DDR3 DRAMs) that can operate independently.<br/> (We have
+already seen banks used in internal caches, and they were often used in large<br/><br/>
+<table border="1" width="400">
+<caption> <font face="lol" color="#8a2be2" size="5" > <b> ***table****</b></font> </caption>
+<tr>
+<td><b>Standard</b></td> 
+<td><b>Clock rate (MHz)</b></td>
+<td><b>M transfers per second</b></td>
+<td><b>DRAM name</b></td>
+<td><b>MB/sec /DIMM</b></td>
+</tr>
+<tr>
+<td>DDR</td>
+<td>133</td> 
+<td>266</td>
+<td>DDR266</td>
+<td>2128</td>
+</tr>
+<tr>
+<td>DDR</td> 
+<td>150</td>
+<td>300</td>
+<td>DDR300</td>
+<td>2400</td>
+</tr>
+<tr>
+<td>DDR</td> 
+<td>200</td>
+<td>400</td>
+<td>DDR400</td>
+<td>3200</td>
+</tr>
+<tr>
+<td>DDR2</td> 
+<td>266</td>
+<td>533</td>
+<td>DDR2533</td>
+<td>4246</td>
+</tr>
+</table>
+<hr />
+<hr />
